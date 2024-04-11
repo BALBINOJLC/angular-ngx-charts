@@ -1,34 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { productSales, productSalesMulti } from '../data/products';
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { single } from './data';
+
 
 @Component({
-  selector: 'app-product-pie-charts',
+  selector: 'my-app-pie',
   templateUrl: './product-pie-charts.component.html',
   styleUrls: ['./product-pie-charts.component.css']
 })
-export class ProductPieChartsComponent implements OnInit {
-
-  productSales: any[]
-  productSalesMulti: any[]
-
-  view: any[] = [700, 370];
+export class AppComponentPie {
+  single: any[];
+  view: any[] = [700, 400];
 
   // options
+  gradient: boolean = true;
   showLegend: boolean = true;
   showLabels: boolean = true;
-
-  gradient: boolean = false;
-  isDoughnut: boolean = true;
-
+  isDoughnut: boolean = false;
   legendPosition: string = 'below';
 
   colorScheme = {
-    domain: ['#704FC4', '#4B852C', '#B67A3D', '#5B6FC8', '#25706F']
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-  constructor() { Object.assign(this, { productSales, productSalesMulti }) }
+  constructor() {
+    Object.assign(this, { single });
+  }
 
-  ngOnInit(): void {
+  onSelect(data): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
   }
 
   onActivate(data): void {
@@ -37,9 +38,5 @@ export class ProductPieChartsComponent implements OnInit {
 
   onDeactivate(data): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
-  }
-
-  onSelect(data): void {
-    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
   }
 }

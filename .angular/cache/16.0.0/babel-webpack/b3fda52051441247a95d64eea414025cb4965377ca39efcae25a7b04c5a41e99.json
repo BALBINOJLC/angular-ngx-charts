@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var single = [{\n  \"name\": \"Germany\",\n  \"value\": 8940000\n}, {\n  \"name\": \"USA\",\n  \"value\": 5000000\n}, {\n  \"name\": \"France\",\n  \"value\": 7200000\n}, {\n  \"name\": \"UK\",\n  \"value\": 6200000\n}];","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

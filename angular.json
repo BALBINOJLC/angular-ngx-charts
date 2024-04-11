@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-ngx-charts"
+    }
+  },
+  "defaultProject": "angular-ngx-charts",
+  "cli": {
+    "analytics": false
+  }
 }
