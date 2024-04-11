@@ -1,29 +1,10 @@
 # angular-ngx-charts-tutorial
-angular-ngx-charts-tutorial
 
-https://swimlane.gitbook.io/ngx-charts/examples
+Este es un tutorial para trabajar con Ngx-Charts en Angular. Puedes encontrar ejemplos y más información en la [documentación oficial de Ngx-Charts](https://swimlane.gitbook.io/ngx-charts/examples).
 
-# installg ngx-charts-tutorial
+## Instalación
 
-npm i @swimlane/ngx-charts --save
+Para instalar las dependencias necesarias, simplemente ejecuta el siguiente comando:
 
-npm install @angular/cdk
-
-# app.module.ts
-
-add imports
-
-```javascript
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-```
-
-add to import array
-
-```javascript
-imports: [
-  ...
-  NgxChartsModule,
-  BrowserAnimationsModule
-]
-```
+```bash
+yarn install
